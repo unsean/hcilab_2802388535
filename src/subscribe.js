@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function validateAge() {
     const age = parseInt(ageInput.value);
-    if (isNaN(age) || age < 18 || age > 120) {
-      ageError.textContent = 'Age must be between 18 and 120';
+    if (isNaN(age) || age < 18 || age > 100) {
+      ageError.textContent = 'Age must be between 18 and 100';
       ageInput.classList.add('error');
       return false;
     }
