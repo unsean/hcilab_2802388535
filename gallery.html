@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <title>Our Fleet | ShipDeckKK</title>
+  <link rel="stylesheet" href="/src/style/layout.css">
+  <link rel="stylesheet" href="/src/style/style.css">
+  <link rel="stylesheet" href="/src/style/gallery.css">
+  <link rel="icon" type="image/png/webp" href="/src/img/logo.webp">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo">Ship<span class="highlight">DecKK</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+      <div class="header-buttons">
+        <button class="burger" aria-label="Menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section page-header bghero">
+    <div class="container">
+      <h1 class="section-title">Our Fleet</h1>
+      <p class="subtitle">Explore our diverse collection of premium vessels, from luxury yachts to commercial cargo ships.</p>
+    </div>
+  </section>
+
+  <section class="section filters">
+    <div class="container">
+        <div class="filters-wrapper">
+            <div class="filter-controls">
+                <!-- Filter Buttons Group -->
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="ri-ship-line"></i>
+                        <span>All Vessels</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Luxury Yacht">
+                        <i class="ri-sailboat-line"></i>
+                        <span>Yachts</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Cargo Ship">
+                        <i class="ri-ship-2-line"></i>
+                        <span>Cargo</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Luxury Liner">
+                        <i class="ri-ship-fill"></i>
+                        <span>Liners</span>
+                    </button>
+                    <button class="filter-btn" data-filter="Fishing Vessel">
+                        <i class="ri-anchor-line"></i>
+                        <span>Fishing</span>
+                    </button>
+                </div>
+
+                <!-- Search and Sort Group -->
+                <div class="search-sort-wrapper">
+                    <div class="sort-container">
+                        <label for="sort-select">Sort By:</label>
+                        <select id="sort-select" class="sort-select">
+                            <option value="default">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="name-asc">Name: A to Z</option>
+                            <option value="name-desc">Name: Z to A</option>
+                        </select>
+                    </div>
+
+                    <div class="search-container">
+                        <i class="ri-search-line search-icon"></i>
+                        <input type="text" id="search-input" placeholder="Search vessels..." class="search-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="section gallery-grid">
+    <div class="container grid grid-3" id="vessel-grid">
+      <!-- Later card from JS -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Ship<span class="highlight">DecKK</span></h4>
+        <p>Premium vessel dealership offering high-end yachts and ships since 2020.</p>
+        <div class="socials">
+          <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscribe.html">Subscribe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="ri-map-pin-line"></i> 123 Marina Bay, Oceanview, CA</p>
+        <p><i class="ri-phone-line"></i> +1 (234) 567-890</p>
+        <p><i class="ri-mail-line"></i> info@shipdeck.com</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">&copy; 2025 ShipDeckKK. All rights reserved.</div>
+  </footer>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-content">
+    <span class="modal-close" id="modal-close">&times;</span>
+    <img src="" alt="" class="modal-img" id="modal-img" />
+    <h2 id="modal-title"></h2>
+    <div id="modal-price"></div>
+    
+    <div class="modal-body">
+    <div class="part1">
+      <h3>Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Year</span>
+            <span id="modal-year" class="spec-value"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Length</span>
+            <span id="modal-length" class="spec-value"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Capacity</span>
+            <span id="modal-capacity" class="spec-value"></span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Engine</span>
+            <span id="modal-engine" class="spec-value"></span>
+          </div>
+        </div>
+    </div>
+    
+    <div class="part2">
+      <h3>Key Features</h3>
+        <ul id="modal-features" class="features-list"></ul>
+    </div>
+    
+    <div class="part3">
+      <h3>Description</h3>
+      <p id="modal-desc"></p>  
+      </div>
+    </div>
+    
+    <div class="modal-buttons">
+      <button class="btn btn-primary">Schedule Viewing</button>
+    </div>
+  </div>
+</div>
+
+  <script src="src/script.js"></script>
+  <script src="src/gallery.js"></script>
+</body>
+</html>

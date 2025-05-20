@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <title>Subscribe | ShipDeckKK</title>
+  <link rel="stylesheet" href="/style/layout.css" />
+  <link rel="stylesheet" href="/style/style.css" />
+  <link rel="stylesheet" href="/style/subscribe.css" />
+  <link rel="icon" type="image/png/webp" href="/src/img/logo.webp">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo">
+        Ship<span class="highlight">DecKK</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="subscribe.html" class="active">Subscribe</a>
+      </nav>
+      <div class="header-buttons">
+        <button class="burger" aria-label="Menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Page Header ===== -->
+  <section class="page-header section">
+    <div class="container">
+      <h1 class="section-title">Stay In the Loop</h1>
+      <p class="subtitle">
+        Join our newsletter for exclusive updates, new vessel drops, and special offers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Subscription Form ===== -->
+  <section class="section subscribe-form-section">
+    <div class="container">
+      <div class="subscribe-grid">
+        <div class="subscribe-content">
+          <h2>Join Our Maritime Community</h2>
+          <p class="lead">
+            Stay connected with the latest in maritime excellence and exclusive opportunities.
+          </p>
+          <div class="features-list">
+            <div class="feature-item">
+              <i class="ri-ship-2-line"></i>
+              <div>
+                <h3>Exclusive Fleet Updates</h3>
+                <p>Be the first to know about new vessel arrivals and special listings.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="ri-price-tag-3-line"></i>
+              <div>
+                <h3>Member-Only Deals</h3>
+                <p>Access special pricing and seasonal promotions reserved for subscribers.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="ri-newspaper-line"></i>
+              <div>
+                <h3>Industry Insights</h3>
+                <p>Receive expert analysis and market trends in the maritime industry.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="ri-customer-service-2-line"></i>
+              <div>
+                <h3>Priority Support</h3>
+                <p>Get dedicated assistance and faster response times for your inquiries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe-form-wrapper">
+          <form class="subscribe-form" id="subscribeForm" action="/api/subscribe" method="POST">
+            <h3>Create Your Account</h3>
+        <div class="form-row">
+          <label for="sub-name">Full Name</label>
+          <input
+            type="text"
+            id="sub-name"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
+              <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-row">
+          <label for="sub-email">Email Address</label>
+          <input
+            type="email"
+            id="sub-email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+              <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-row">
+              <label for="sub-password">Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="sub-password"
+                  name="password"
+                  placeholder="Create a password"
+                  required
+                />
+                <span class="password-toggle" role="button" tabindex="0">
+                  <i class="ri-eye-line"></i>
+                </span>
+              </div>
+              <span class="error-message" id="passwordError"></span>
+            </div>
+            <div class="form-row">
+              <label for="sub-confirm-password">Confirm Password</label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="sub-confirm-password"
+                  name="confirmPassword"
+                  placeholder="Confirm your password"
+                  required
+                />
+                <span class="password-toggle" role="button" tabindex="0">
+                  <i class="ri-eye-line"></i>
+                </span>
+              </div>
+              <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+            <div class="form-row">
+              <label for="sub-age">Age</label>
+              <input
+                type="number"
+                id="sub-age"
+                name="age"
+                min="18"
+                max="120"
+                placeholder="Your age"
+                required
+              />
+              <span class="error-message" id="ageError"></span>
+        </div>
+        <div class="form-row">
+          <label for="sub-preferences">Interests</label>
+          <select id="sub-preferences" name="preferences" required>
+            <option value="">-- Select one --</option>
+            <option value="new-fleet">New Fleet Alerts</option>
+            <option value="special-offers">Special Offers</option>
+            <option value="industry-news">Industry News</option>
+            <option value="maintenance-tips">Maintenance Tips</option>
+          </select>
+              <span class="error-message" id="preferencesError"></span>
+            </div>
+            <div class="form-row checkbox-row">
+              <input type="checkbox" id="terms" name="terms" required />
+              <label for="terms">I agree to the <a href="#" class="terms-link">Terms and Conditions</a></label>
+              <span class="error-message" id="termsError"></span>
+            </div>
+            <div class="form-row checkbox-row">
+              <input type="checkbox" id="marketing" name="marketing" />
+              <label for="marketing">I agree to receive marketing communications</label>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn btn-primary">Subscribe Now</button>
+        </div>
+      </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Subscribe? ===== -->
+  <section class="section benefits">
+    <div class="container grid grid-3">
+      <div class="benefit-card">
+        <div class="icon">🚀</div>
+        <h3>First-to-Know</h3>
+        <p>
+          You'll be the first to hear about our newest vessels and exclusive launches.
+        </p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">💎</div>
+        <h3>Member Deals</h3>
+        <p>
+          Access subscriber-only pricing and seasonal specials you won't see anywhere else.
+        </p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📰</div>
+        <h3>Expert Insights</h3>
+        <p>
+          Get industry updates, maintenance advice, and market trends straight to your inbox.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Ship<span class="highlight">DecKK</span></h4>
+        <p>Premium vessel dealership offering high-end yachts and ships since 2020.</p>
+        <div class="socials">
+          <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscribe.html" class="active">Subscribe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="ri-map-pin-line"></i> 123 Marina Bay, Oceanview, CA</p>
+        <p><i class="ri-phone-line"></i> +1 (234) 567-890</p>
+        <p><i class="ri-mail-line"></i> info@shipdeck.com</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">&copy; 2025 ShipDeckKK. All rights reserved.</div>
+  </footer>
+
+  <script src="src/subscribe.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* timeline-fade-effect.css */
+
+/* Base timeline styling modifications to work with the fade effect */
+.timeline {
+  position: relative;
+  padding: 6rem 0;
+  /* Ensure the timeline has enough space for the fade effect */
+  min-height: 100vh;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--clr-accent) 10%,
+    var(--clr-accent) 90%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Timeline items will get their opacity set by JavaScript */
+.timeline li {
+  width: 50%;
+  padding: 3rem;
+  position: relative;
+  /* Essential for smooth opacity transitions */
+  transition: opacity 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), 
+              transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Default positioning */
+.timeline li:nth-child(odd) {
+  margin-left: auto;
+  text-align: right;
+  padding-right: 6rem;
+}
+
+.timeline li:nth-child(even) {
+  padding-left: 6rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 2rem;
+    height: calc(100% - 4rem);
+    top: 2rem;
+  }
+
+  .timeline li {
+    width: 100%;
+    padding: 2rem 0 2rem 5rem;
+    text-align: left !important;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .timeline li:nth-child(odd) {
+    padding-right: 0;
+  }
+
+  .year {
+    left: 0 !important;
+    right: auto !important;
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.9rem;
+    z-index: 3;
+  }
+
+  .event {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .event::after {
+    left: -2.5rem !important;
+    right: auto !important;
+  }
+  
+  /* Fix for event markers */
+  .timeline li:nth-child(odd) .event::after,
+  .timeline li:nth-child(even) .event::after {
+    left: -2.5rem !important;
+    right: auto;
+  }
+}

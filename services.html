@@ -1,0 +1,279 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <title>Our Services | ShipDeckKK</title>
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/style/layout.css" />
+  <link rel="stylesheet" href="/style/services.css" />
+  <link rel="icon" type="image/png/webp" href="/src/img/logo.webp">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo">Ship<span class="highlight">DecKK</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+            <div class="header-buttons">        
+            <button class="burger" aria-label="Menu">
+              <i class="ri-menu-line"></i>
+            </button>      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section hero bghero">
+    <div class="container">
+      <h1 class="hero-title">Comprehensive Maritime Services</h1>
+      <p class="hero-subtitle">
+        From vessel acquisition to maintenance and insurance, we provide comprehensive maritime services.
+      </p>
+      <div class="actions">
+        <a href="subscribe.html" class="btn btn-primary">Subscribe Us</a>
+        <a href="#services-grid" class="btn btn-outline">Explore More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="container">
+      <h2>Service Details</h2>
+      <p>
+        We offer a full suite of maritime services. Click "Learn More" on any card to see  
+        detailed breakdowns of what's included.
+      </p>
+    </div>
+  </section>
+
+  <section id="services-grid" class="section services-overview">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+      <div class="grid grid-3">
+
+        <!-- Vessel Sales -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">⚓️</div>
+          </div>
+          <h3>Vessel Sales</h3>
+          <p>
+            Personalized matching of luxury yachts, cargo ships, and liners to your needs.
+          </p>
+          <button class="learn-more-btn" data-target="details-sales">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-sales" hidden>
+            <ul>
+              <li>Market research & vessel sourcing</li>
+              <li>Sea trials and demo sails</li>
+              <li>Financing & leasing packages</li>
+              <li>Trade-in & upgrade programs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Maintenance Services -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">🛠️</div>
+          </div>
+          <h3>Maintenance Services</h3>
+          <p>
+            Complete maintenance and repair solutions to keep your vessel in top shape.
+          </p>
+          <button class="learn-more-btn" data-target="details-maintenance">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-maintenance" hidden>
+            <ul>
+              <li>Hull cleaning & polishing</li>
+              <li>Engine diagnostics & overhauls</li>
+              <li>Electrical & navigation systems</li>
+              <li>Winterization & mooring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Insurance Options -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">🔒</div>
+          </div>
+          <h3>Insurance Options</h3>
+          <p>
+            Tailored insurance plans to protect your vessel and crew around the globe.
+          </p>
+          <button class="learn-more-btn" data-target="details-insurance">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-insurance" hidden>
+            <ul>
+              <li>Hull & machinery cover</li>
+              <li>Liability & protection</li>
+              <li>Crew & passenger safeguards</li>
+              <li>War & piracy endorsements</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Custom Builds -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">🚢</div>
+          </div>
+          <h3>Custom Builds</h3>
+          <p>
+            Bespoke vessel design and construction exactly to your specifications.
+          </p>
+          <button class="learn-more-btn" data-target="details-builds">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-builds" hidden>
+            <ul>
+              <li>Concept design & 3D modeling</li>
+              <li>Naval architecture services</li>
+              <li>Material selection & procurement</li>
+              <li>Full project management</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Logistics Solutions -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">📦</div>
+          </div>
+          <h3>Logistics Solutions</h3>
+          <p>
+            End-to-end cargo and crew logistics for efficient global operations.
+          </p>
+          <button class="learn-more-btn" data-target="details-logistics">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-logistics" hidden>
+            <ul>
+              <li>Route planning & optimization</li>
+              <li>Crew scheduling & onboarding</li>
+              <li>Customs & regulatory support</li>
+              <li>On-shore coordination</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Consulting & Compliance -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">📋</div>
+          </div>
+          <h3>Consulting & Compliance</h3>
+          <p>
+            Expert guidance on regulations, operations, and strategic planning.
+          </p>
+          <button class="learn-more-btn" data-target="details-consulting">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-consulting" hidden>
+            <ul>
+              <li>Regulatory & flag-state advice</li>
+              <li>Safety management systems</li>
+              <li>Technical due diligence</li>
+              <li>Market feasibility studies</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Financing Solutions -->
+        <div class="service-card">
+          <div class="icon-wrapper">
+          <div class="icon">💰</div>
+          </div>
+          <h3>Financing Solutions</h3>
+          <p>
+            Custom finance and leasing to get you afloat quickly and affordably.
+          </p>
+          <button class="learn-more-btn" data-target="details-financing">
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+          <div class="service-details" id="details-financing" hidden>
+            <ul>
+              <li>Loan structuring & advisory</li>
+              <li>Lease & charter financing</li>
+              <li>Refinancing existing assets</li>
+              <li>Tax & depreciation planning</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section quote">
+    <div class="container">
+      <h2>Ready to Find Your Perfect Vessel?</h2>
+      <p>
+        Join our maritime community and discover the perfect vessel for your needs. 
+        Subscribe now for exclusive updates and special offers.
+      </p>
+      <div class="cta-buttons">
+        <a href="subscribe.html" class="btn">Subscribe Now <i class="ri-arrow-right-line"></i></a>
+        </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Ship<span class="highlight">DecKK</span></h4>
+        <p>Premium vessel dealership offering high-end yachts and ships since 2020.</p>
+        <div class="socials">
+          <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscribe.html">Subscribe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="ri-map-pin-line"></i> 123 Marina Bay, Oceanview, CA</p>
+        <p><i class="ri-phone-line"></i> +1 (234) 567-890</p>
+        <p><i class="ri-mail-line"></i> info@shipdeck.com</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="bottom container">&copy; 2025 ShipDeckKK. All rights reserved.</div>
+  </footer>
+  <script src="/src/services.js"></script>
+</body>
+</html>
